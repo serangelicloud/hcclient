@@ -946,7 +946,7 @@ Client-based commands:
                                                               termcolor.colored("Whisper lock active, toggle it off to send messages", self.args["client_color"])))
                             return
 
-                    self.send(json.dumps({"cmd": "chat", "text": message}))
+                    self.send(json.dumps({"cmd": "chat", "text": f"{message}."}))
 
     def close(self, error: bool=False, thread: bool=True) -> None:
         """
